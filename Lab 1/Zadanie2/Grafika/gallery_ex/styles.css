@@ -1,0 +1,44 @@
+body {
+	/* font-family: serif; */
+	/* font-size: 80%; */
+    padding: 40px;
+} 
+
+header {
+	font-size: 1.8em;
+    color:rgb(27, 76, 88) ;
+	border-top: 1px dashed black;
+	border-bottom: 1px dashed black;
+    padding-left: 10px;
+}
+
+p.intro{
+    font-size: 14px;
+    padding-left: 10px; 
+}
+
+#content{
+    border-left: 1px dashed black;  
+    padding-left: 2px; 
+}
+
+.column{
+    width: 66%;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap:0px;
+}
+
+
+figure img{
+    border: 1px solid black; 
+    padding: 3px;
+}
+
+figcaption {
+    margin-top: 10px;
+    padding-left: 0px;
+    font-size: small;
+    text-align: center;
+    width: 50%;
+}

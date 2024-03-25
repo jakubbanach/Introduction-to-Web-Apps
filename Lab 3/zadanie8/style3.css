@@ -1,0 +1,133 @@
+body{
+    background-color: rgb(228, 227, 227);
+}
+
+header.heading{
+    display: flex;
+    font-size: 40px;
+    color:#5fca74;
+    justify-content: center;
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+
+.catalog{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    /* height:auto; */
+}
+
+.catalog .content{
+    display:flex;
+    flex-direction: column;
+    flex-basis:40%;
+    margin-left:50px;
+}
+
+.catalog .content .article .title{
+    font-weight: bold;
+    font-size: 18px;
+    /* margin-bottom:30px; */
+}
+
+.catalog .content .article .text{
+    margin-top:20px;
+    margin-bottom: 40px;
+}
+
+a.href{
+    font-size: 20px;
+    color: #5fca74;
+    padding-bottom: 5px;
+    border-bottom: 1.5px solid #5fca74;
+    text-decoration: none;
+}
+
+.catalog .photos{
+    position:relative;
+    display:flex;
+    flex-basis:50%;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.catalog .photos img{
+    height:250px;
+    box-shadow: 10px 0px 10px 0px rgb(226, 209, 109);
+    
+}
+
+img#img1{
+    position:absolute;
+    z-index:0;
+    top:120px;
+    left:0px;
+    transition:0.5s ease-out all;
+}
+
+img#img2{
+    position:absolute;
+    z-index:0;
+    top:150px;
+    left:300px;
+    transition:0.5s ease-out all;
+}
+
+img#img3{
+    position:absolute;
+    z-index:0;
+    top:0px;
+    left:180px;
+    transition:0.5s ease-out all;
+}
+
+img#img1:hover, img#img2:hover, img#img3:hover{
+    z-index:1;
+    outline:#5fca74 10px solid;
+    outline-offset: 10px;
+    transform: scale(1.2);
+    transition:0.4s ease-out all;
+}
+
+@media screen and (max-width:1350px){
+
+    header.heading{
+        margin-bottom: 30px;
+    }
+
+    .catalog{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .catalog .content .article .text{
+        margin-top:10px;
+        margin-bottom: 20px;
+    }
+
+    .catalog .photos{
+        width:0;
+        padding-right: 520px;
+    }
+
+    .catalog .photos img{
+        height:170px;
+    }
+    
+    img#img1{
+        top:100px;
+        left:0;
+    }
+    
+    img#img2{
+        top:120px;
+        left:280px
+    }
+
+    img#img3{
+        top:50px;
+        left:150px;
+    }
+
+}

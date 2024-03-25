@@ -1,0 +1,10 @@
+div{
+    border-radius: 15px;
+    padding: 3px;
+}
+
+p{
+    font-size: 14px;
+    margin: 0px;
+    max-width: 80px;
+}

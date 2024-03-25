@@ -1,0 +1,42 @@
+
+.content{
+    background-color: lightgray;
+    text-align: center;
+    display: flex;
+}
+
+.navbar{
+    background-color: white;
+    width: 200px;
+    display: flex;
+    align-items: stretch;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    width: 200px;
+    background-color: white;
+    justify-content: center;
+    align-items: stretch;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    color: blue;
+    text-align: baseline;
+    overflow: hidden;
+}
+
+
+li:hover {
+    background-color: #90d117;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 300px) {
+    
+}
+

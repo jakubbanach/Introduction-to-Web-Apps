@@ -1,0 +1,71 @@
+<ng-container *ngIf="authService.userRoles?.admin == true">
+    <h3>ŻRÓDŁO DANYCH: {{ selectedSource }}</h3>
+    <div class="row mb-3">
+        <label class="col-auto col-form-label">Wybierz źródło danych:</label>
+        <div class="col-auto">
+            <select class="form-select" [(ngModel)]="selectedSource" (ngModelChange)="chosenData()">
+                <option>FIREBASE</option>
+                <option>SERWER</option>
+            </select>
+        </div>
+    </div>
+    <h3>Aktualny tryb persystencji logowania: {{ selectedPersistence }}</h3>
+    <div class="row mb-3">
+        <label class="col-auto col-form-label">Wybierz tryb persystencji logowania:</label>
+        <div class="col-auto">
+            <select class="form-select" [(ngModel)]="selectedPersistence" (ngModelChange)="chosenPersistence()">
+                <option>local</option>
+                <option>session</option>
+                <option>none</option>
+            </select>
+        </div>
+    </div>
+
+    <h2>Zarządzanie użytkownikami</h2>
+    <ng-container *ngIf="users && users.length > 0">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>UID</th>
+                    <th>Gosc</th>
+                    <th>Klient</th>
+                    <th>Manager</th>
+                    <th>Admin</th>
+                    <th>Banned</th>
+                    <th>Toggle Roles</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users">
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.password }}</td>
+                    <td>{{ user.role.gosc }}</td>
+                    <td>{{ user.role.klient }}</td>
+                    <td>{{ user.role.manager }}</td>
+                    <td>{{ user.role.admin }}</td>
+                    <td>{{ user.role.banned }}</td>
+                    <td class="btn-container">
+                        <button class="btn btn-warning" (click)="setRole(user.password, 'banned', !user.role.banned)"
+                            [ngClass]="{ 'btn-danger': user.role.banned === true }">
+                            Banned
+                        </button>
+                        <button class="btn btn-success" (click)="setRole(user.password, 'manager', !user.role.manager)"
+                            [ngClass]="{ 'btn-success': user.role.manager === true }">
+                            Manager
+                        </button>
+                        <button class="btn btn-succes" (click)="setRole(user.password, 'admin', !user.role.admin)"
+                            [ngClass]="{ 'btn-success': user.role.admin === true }">
+                            Admin
+                        </button>
+                        <!-- <button class="btn btn-primary"
+                            (click)="deleteUser(user.password)"
+                            [ngClass]="{ 'btn-success': user.role.klient == true }">
+                            USUŃ
+                        </button> -->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </ng-container>
+</ng-container>

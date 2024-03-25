@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown menu</title>
+    <link rel="stylesheet" href="style3.css">
+
+</head>
+
+<body>
+  <div class="catalog">
+    <nav class="navbar">
+      <p style="font-size: 28px; margin: 10px;"><strong>BRAND</strong>NAME</p>
+      <ul>
+        <li>Home</li>
+        <li class="dropdown">
+          <div class="one">Menu ▽
+            <div class="dropdown-content">
+              <p>Link 1</p>
+              <p>Link 2</p>
+              <div class="two">Link 3 ▷
+                <div class="dropdown-content2">
+                  <p>Link 1</p>
+                  <p>Link 2</p>
+                  <p>Link 3 </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="dropdown">
+          <div class="one">Services ▽
+            <div class="dropdown-content">
+              <p>Link 1</p>
+              <p>Link 2</p>
+              <p>Link 3</p>
+          </div>
+        </li>
+        <li>About</li>
+      </ul>
+      <div class="buttons">
+        <button class="login">LOG IN</button>
+        <button class="signup">SIGN UP</button>
+      </div>
+    </nav>
+    <div class="content"></div>
+  </div>
+</body>
+</html>

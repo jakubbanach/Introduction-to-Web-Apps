@@ -1,0 +1,132 @@
+.catalog{
+    background-color: lightgray;
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.catalog .card{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin:15px;
+    background-color: white;
+    border-radius: 20px; 
+}
+
+.catalog .card .top img{
+    width:100%;
+    height:100%;
+    border-radius: 20px 20px 0px 0px;
+    padding: 0px;
+}
+
+.catalog .card .content{
+    padding: 15px;
+}
+
+.catalog .card hr{
+    border-top: 1px grey;
+    width:90%;
+}
+
+.catalog .card .footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:15px;
+    margin-bottom:20px;
+}
+
+.catalog .card .footer .button button{
+    display:flex;
+    color: white; 
+    background-color: red;
+    border:none;
+    height: 20px;
+    width: 70px;
+    font-size: 10px;
+    justify-content:center;
+    align-items: center;
+}
+
+.catalog .card .footer .ikons p{
+    font-size: 12px;
+    margin-bottom:0;
+    margin-top: 0;
+    padding-left: 20px;
+}
+
+.catalog .card .footer .ikons .comments{
+    background-image: url(icons/chat-svgrepo-com.svg);
+    background-position:left;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+
+.catalog .card .footer .ikons .likes{
+    background-image: url(icons/heart-svgrepo-com.svg);
+    background-position:left;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+
+@media screen and (max-width: 1500px) {
+    .catalog .card .top .berlin{
+        content: url(img/berlin_big.jpeg);
+    }
+    .catalog .card .top .cracow{
+        content: url(img/cracow_big.jpeg);
+    }
+    .catalog .card .top .chicago{
+        content: url(img/chicago_big.jpeg);
+    }
+    .catalog .card .top .sydney{
+        content: url(img/sydney_big.jpeg);
+    }
+    .catalog .card .top .warsaw{
+        content: url(img/warsaw_big.jpeg);
+    }
+
+}
+
+@media screen and (max-width: 1150px) {
+    .catalog .card .top .berlin{
+        content: url(img/berlin_medium.jpeg);
+    }
+    .catalog .card .top .cracow{
+        content: url(img/cracow_medium.jpeg);
+    }
+    .catalog .card .top .chicago{
+        content: url(img/chicago_medium.jpeg);
+    }
+    .catalog .card .top .sydney{
+        content: url(img/sydney_medium.jpeg);
+    }
+    .catalog .card .top .warsaw{
+        content: url(img/warsaw_medium.jpeg);
+    }
+
+}
+
+@media screen and (max-width: 675px) {
+    .catalog .card .top .berlin{
+        content: url(img/berlin_small.jpeg);
+    }
+    .catalog .card .top .cracow{
+        content: url(img/cracow_small.jpeg);
+    }
+    .catalog .card .top .chicago{
+        content: url(img/chicago_small.jpeg);
+    }
+    .catalog .card .top .sydney{
+        content: url(img/sydney_small.jpeg);
+    }
+    .catalog .card .top .warsaw{
+        content: url(img/warsaw_small.jpeg);
+    }
+}

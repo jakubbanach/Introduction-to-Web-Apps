@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Okno dialogowe z imieniem</title>
+</head>
+<body>
+
+  <button id="promptButton">Wprowadź imię</button>
+  
+  <section id="nameSection">
+    <h2>Twoje imię:</h2>
+    <p id="userName"></p>
+  </section>
+
+  <script>
+    document.getElementById('promptButton').addEventListener('click', function() {
+      const userName = prompt('Proszę wprowadź swoje imię:');
+      
+      if(userName !== null && userName !== '') {
+        document.getElementById('userName').textContent = userName;
+      } else {
+        alert('Nie podano imienia!');
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<h1>Lista wycieczek</h1>
+<div class="container">
+    <div class="row row-cols-2">
+        <div [style.font-weight]="wycieczka.miejsca > 2 ? 'normal' : 'bolder'" 
+            class="col-12 col-lg-6 content-wycieczki" *ngFor="let wycieczka of (wycieczki | filterPipe : filtrInterface), index as i">
+            <div class="wycieczka" [ngClass]="getClassName(wycieczka)">
+                <div class="image-container">
+                    <img routerLink="/wycieczki/{{wycieczka.id}}" [src]="wycieczka.zdjecie" alt="{{ wycieczka.nazwa }}" class="img-fluid rounded-image" onmouseover="this.style.cursor='pointer'">
+                </div>
+                <h2 *ngIf="!wycieczka['editable']">{{ wycieczka.nazwa }}</h2>
+                <input *ngIf="wycieczka['editable']" type="text" [(ngModel)]="wycieczka.nazwa" class="form-control-sm">
+                <p *ngIf="!wycieczka['editable']"><strong>Kraj:</strong> {{ wycieczka.docelowy_kraj }}</p>
+                <input *ngIf="wycieczka['editable']" type="text" [(ngModel)]="wycieczka.docelowy_kraj" class="form-control-sm">
+                <p *ngIf="!wycieczka['editable']"><strong>Data rozpoczęcia:</strong> {{ wycieczka.data_rozpoczecia }}</p>
+                <input *ngIf="wycieczka['editable']" type="date" [(ngModel)]="wycieczka.data_rozpoczecia" class="form-control">
+                <p *ngIf="!wycieczka['editable']"><strong>Data zakończenia: </strong>{{ wycieczka.data_zakonczenia }}</p>
+                <input *ngIf="wycieczka['editable']" type="date" [(ngModel)]="wycieczka.data_zakonczenia" class="form-control">
+                <p *ngIf="!wycieczka['editable']"><strong>Cena:</strong> {{ wycieczka.cena }} {{ waluta }}</p>
+                <input *ngIf="wycieczka['editable']" type="number" [(ngModel)]="wycieczka.cena" class="form-control-sm">
+                <p *ngIf="!wycieczka['editable']"><strong>Miejsca: </strong>{{ wycieczka.miejsca}}</p>
+                <input *ngIf="wycieczka['editable']" type="number" [(ngModel)]="wycieczka.miejsca" class="form-control-sm">
+                <p *ngIf="!wycieczka['editable']"><strong>Krótki opis: </strong> {{ wycieczka.opis }}</p>
+                <textarea *ngIf="wycieczka['editable']" [(ngModel)]="wycieczka.opis" class="form-control"></textarea>
+                <!-- <app-ocena></app-ocena> -->
+                <div class="buttons mt-auto" *ngIf="getUser()">
+                    <div class="more">
+                        <button *ngIf="!ifManager" class="btn btn-primary" routerLink="/wycieczki/{{wycieczka.id}}" (click)="checkNumber(wycieczka.id);$event.stopPropagation()">
+                            <i class="fas fa-info"></i>
+                        </button>
+                        <div *ngIf="ifManager" class="input-group formula">
+                            <div class="input-group-append" *ngIf="wycieczka['editable']">
+                                <button (click)="toggleEditable(wycieczka, $event)" class="btn btn-outline-secondary" type="button">
+                                    <i class="fas fa-check"></i>
+                                </button>
+                            </div>
+                            <div class="input-group-append" *ngIf="!wycieczka['editable']">
+                                <button (click)="toggleEditable(wycieczka, $event)" class="btn btn-outline-secondary" type="button">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reservation">
+                        <button *ngIf="!ifManager" (click)="rezerwujMiejsce(wycieczka)" [disabled]="wycieczka.miejsca === 0" class="btn btn-primary">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <p *ngIf="wycieczka.miejsca === 0">Brak miejsc!</p>
+                        <button *ngIf="!ifManager" (click)="rezygnujZMiejsca(wycieczka, i)" class="btn btn-primary">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <button *ngIf="ifManager" (click)="usunWycieczke(wycieczka)" class="btn btn-danger">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

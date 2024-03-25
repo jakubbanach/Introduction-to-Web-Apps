@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Galeria Zdjęć</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="catalog">
+    <div class="card"> <!-- #1 -->
+      <img src="img/1.jpg" alt="1" id="1">
+  </div>
+  <div class="card"> <!-- #2 -->
+      <img src="img/2.jpg" alt="2" id="2">
+  </div>
+  <div class="card"> <!-- #3 -->
+      <img src="img/3.jpg" alt="3" id="3">
+  </div>
+  <div class="card"> <!-- #4 -->
+      <img src="img/4.jpg" alt="4" id="4">
+  </div>
+  <div class="card"> <!-- #5 -->
+      <img src="img/5.jpg" alt="5" id="5">
+  </div>
+  <div class="card"> <!-- #6 -->
+      <img src="img/6.jpg" alt="6" id="6">
+  </div>
+  <div class="card"> <!-- #7 -->
+      <img src="img/7.jpg" alt="7" id="7">
+  </div>
+  <div class="card"> <!-- #8 -->
+      <img src="img/8.jpg" alt="8" id="8">
+  </div>
+  <div class="card"> <!-- #9 -->
+      <img src="img/9.jpg" alt="9" id="9">
+  </div>
+  <div class="card"> <!-- #10 -->
+      <img src="img/10.jpg" alt="10" id="10">
+  </div>
+  <div class="card"> <!-- #11 -->
+      <img src="img/11.jpg" alt="11" id="11">
+  </div>
+  
+  </div>
+
+  <div class="focus" id="focus">
+    <button id="lewo" onclick="prevImage()">⬅️</button>
+    <img id="focusImage" alt="Powiększony obrazek">
+    <button id="zamknij" onclick="hideImage()">❌</button>
+    <button id="prawo" onclick="nextImage()">➡️</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

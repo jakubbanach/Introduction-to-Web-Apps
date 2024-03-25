@@ -1,0 +1,33 @@
+1 
+ilość punktów - wpływanie na przebieg 
+stop propagation -> tylko robi dla danego koloru (pierwszego co przechwyca)
+przycisk invert -> zmienia kolejność
+jak żółty to i czerwony i szary (default)
+Przekroczenie pułapu - wyłącza (nie wyłącza)
+--------------
+4
+Boisko z obramowaniem + piłka 
+Po kliknięciu piłka przemieszcza się (ruch)
+Poza boiskiem - komunikat kliknięcie poza boiskiem
+--------------
+5
+karuzela czasowa/przyciski (bootstrap)
+rozwiązanie responsywne
+Nie ma linków
+znika karuzela dla widoków mniejszych niż tabletowy
+--------------
+6
+Password - ocena siły hasła
+dotyczy hasła pierwszego -> oko dodaje widzialność
+Porównanie gdy Enter/Tab/kliknięcie poza (zmiana Focusa)
+--------------
+7
+Galeria->po naciśnięciu, reszta wyszarzona
+klikniecie krzyżyk/poza - powrót do głównej galerii
+strzałka lewa i prawo
+--------------
+8
+po kliknieciu stolice i populacja i area - zamkniecie po ponownym kliknieciu
+Filtracja i sortowanie
+suma ze wszystkich regionów 
+paginacja (jakiś sposób)

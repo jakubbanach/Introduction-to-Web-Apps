@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <title>PAW Bootstrap przykład</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+
+    <style type="text/css">
+        .jumbotron {
+            background-image: url('img/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        section {
+            padding-top: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar bg-primary navbar-dark navbar-expand-md ">
+
+        <a href="#" class="navbar-brand">PAW</a>
+        <button type="button" class="navbar-toggler navbar-toggler-right" data-toggle="collapse"
+            data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto" id="navScrollspy"> <!--- mr-auto - w prawo, ml-auto- w lewo -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#top">Do góry</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">O nas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Usługi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ceny</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <section id="top" class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-1">PAW</h1>
+                <p class="display-4">Chwytamy chwilę </p>
+                <p class="lead">Podziel się z przyjaciółmi i resztą świata swoimi najlepszymi zdjęciami i
+                    filmami </p>
+                <p><strong>Download now on:</strong></p>
+                <a href="#" class="btn btn-lg btn-primary">App Store</a>
+                <a href="#" class="btn btn-lg btn-primary">Google Play</a>
+            </div>
+        </section>
+    </header>
+
+    <div class="container">
+        <section id="section-description">
+            <h2 class="display-4">Kim jestesmy?</h2>
+            <p>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle
+                poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia
+                tekstem próbnej książki.</p>
+            <p>Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając
+                praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy
+                Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem
+                Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak
+                Aldus PageMaker</p>
+        </section>
+    </div>
+
+    <section id=" section-showcase">
+        <h2 class="display-4">PAW w akcji</h2>
+        <p>Przykłady naszej działaności.</p>
+    </section>
+</body>
+
+</html>

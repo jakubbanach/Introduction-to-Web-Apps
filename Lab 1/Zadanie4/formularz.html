@@ -1,0 +1,55 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+
+<body>
+	<form>
+        <form action="twoj_script.php" method="post">
+            <label for="konto">Nr konta:</label><br>
+            <input type="text" id="konto" name="konto" required><br><br>
+    
+            <label for="imie">Imię:</label><br>
+            <input type="text" id="imie" name="imie" required><br><br>
+    
+            <label for="nazwisko">Nazwisko:</label><br>
+            <input type="text" id="nazwisko" name="nazwisko" required><br><br>
+    
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+    
+            <label for="adres">Adres:</label><br>
+            <input type="text" id="adres" name="adres" required><br><br>
+    
+            <label for="kod">Kod pocztowy:</label><br>
+            <input type="text" id="kod" name="kod" pattern="[0-9]{2}-[0-9]{3}" required><br><br>
+      
+            <!--  -->
+            <label for="miasto">Miasto:</label><br>
+            <input list="lista_miast" name="miasto" id="miasto" required><br><br>
+      
+            <datalist id="lista_miast">
+                <option value="Warszawa">
+                <option value="Kraków">
+                <option value="Wrocław">
+                <option value="Łódź">
+                <option value="Poznań">
+                <option value="Gdańsk">
+                <option value="Szczecin">
+                <option value="Lublin">
+                <option value="Bydgoszcz">
+                <option value="Białystok">
+            </datalist>
+
+            <label for="kwota_przelewu">Kwota przelewu:</label><br>
+            <input type="number" id="kwota_przelewu" name="kwota_przelewu" step="0.01" required><br><br>
+            <!-- Typ "number" i atrybut "step" pozwalają na wprowadzenie liczby zmiennoprzecinkowej z dokładnością do 2 miejsc po przecinku -->
+    
+            <label for="data_przelewu">Data przelewu:</label><br>
+            <input type="date" id="data_przelewu" name="data_przelewu" required><br><br>
+            <input type="submit" value="Wyślij">
+        </form>
+</body>
+
+</html>

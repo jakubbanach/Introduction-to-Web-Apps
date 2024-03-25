@@ -1,0 +1,188 @@
+/* .content-wycieczki {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    column-gap: 15px;
+    row-gap: 15px;
+    position: relative;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+.wycieczka {
+    position: relative;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+}
+
+.najdrozsza {
+    background-color: lightcoral;
+}
+
+.najtansza {
+    background-color: lightgreen;
+}
+
+.inne {
+    background-color: bisque;
+}
+
+.sprzedane {
+    background-color: grey;
+}
+
+.wycieczka p,
+h2,
+button {
+    margin: 0;
+    padding-left: 10px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.round-image {
+    border-radius: 40px;
+    width: 100%;
+    height: 250px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.buttons p {
+    color: red;
+}
+
+.najdrozsza .buttons p {
+    color: white;
+}
+
+button {
+    margin: 10px;
+    width: 50px;
+    height: 30px;
+    background-color: lightblue;
+    border: none;
+    cursor: pointer;
+}
+
+button:disabled {
+    display: none;
+    cursor: not-allowed;
+}
+
+app-ocena {
+    display: flex;
+    justify-content: center;
+} */
+
+.container {
+    margin-top: 10px;
+}
+
+.content-wycieczki {
+    /* position: relative; */
+    /* margin-bottom: 10px; */
+    /* margin-left: 10px; */
+    /* margin-right: 10px; */
+    /* border-radius: 40px; */
+    margin-top: 10px;
+    /* padding: 10px; */
+}
+
+.wycieczka {
+    position: relative;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+    /* border: 1px solid #ccc; */
+}
+
+.najdrozsza {
+    background-color: lightcoral;
+}
+
+.najtansza {
+    background-color: lightgreen;
+}
+
+.inne {
+    background-color: bisque;
+}
+
+.sprzedane {
+    background-color: grey;
+}
+
+.wycieczka p,
+h2,
+button {
+    margin: 0;
+    padding-left: 10px;
+}
+
+
+
+.rounded-image {
+    border-radius: 150px;
+    width: 250px;
+    height: 250px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    justify-content: space-between;
+    margin:15px;
+    /* margin-bottom:20px; */
+}
+
+.reservation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin:15px; */
+}
+
+.buttons p {
+    color: red;
+    align-items: center;
+    padding: 0;
+}
+
+/* .najdrozsza .buttons p {
+    color: white;
+} */
+
+button {
+    margin: 10px;
+    width: 50px;
+    height: 40px;
+    background-color: lightblue;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+button:disabled {
+    display: none;
+    cursor: not-allowed;
+}
+
+/* input{
+    margin-top: 5px;
+}
+
+.formula button{
+    height: 30px;
+} */

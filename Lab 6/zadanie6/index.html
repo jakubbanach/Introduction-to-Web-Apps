@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Nowe hasło</title>
+</head>
+
+<body>
+    <section>
+        <p>New password</p>
+        <div class="password-container">
+            <input type="password" id="new" oninput="checkPassword('new')" class="password-input">
+            <img src="img/eye_not_visible.png" class="eye-icon" style="width: 30px;" onclick="togglePassword('new',this)">
+        </div>
+        <p>Repeat new password</p>
+        <div class="password-container">
+            <input type="password" id="repeat" class="password-input">
+            <img src="img/eye_not_visible.png" class="eye-icon" style="width: 30px;" onclick="togglePassword('repeat', this)">
+        </div>
+        <p id="checkSimilarity">Hasła niepoprawne</p>
+        <p>Password requirements</p>
+        <div id="add">
+            <p>
+                <img src="img/wrong.png" id="charEight" alt="img" height="10px">
+                at least 8 characters
+            </p>
+        </div>
+        <div id="add">
+            <p> 
+                <img src="img/wrong.png" id="charSpecial" alt="img" height="10px">
+                at least one special character
+            </p>
+        </div>
+        <div id="add">
+            <p>
+                <img src="img/wrong.png" id="charCapital" alt="img" height="10px">
+                at least one capital letter
+            </p>
+        </div>
+        <div id="add">
+            <p>
+                <img src="img/wrong.png" id="charDigit" alt="img" height="10px">
+                at least one digit
+            </p>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

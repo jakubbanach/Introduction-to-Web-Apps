@@ -1,0 +1,147 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url(bg.jpg);
+    background-size:cover;
+    z-index:-1;
+}
+
+.catalog{
+    background-color: rgba(76, 183, 255,0.4);
+    height: 100vh;
+    z-index: 0;
+}
+
+.catalog nav{
+    height: 12vh;
+    background-color: rgb(76, 183, 255);
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    opacity: 1;
+    z-index: 1;
+}
+
+.catalog ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+.catalog li{
+    padding: 10px;
+}
+
+/* Menu rozwijane */
+.catalog .dropdown-content {
+    display: none;
+    position: absolute;
+    font-size: 16px;
+    background-color: #fff;
+    color: rgb(76, 183, 255);
+    opacity: 0;
+    transition: 2s;
+    text-align: center;
+    opacity: 1;
+    z-index: 1;
+}
+
+.catalog .dropdown-content p{
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    margin: 0px;    
+}
+
+.catalog .two{
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    margin: 0px;  
+}
+
+.catalog .dropdown-content2 {
+    display: none;
+    position: absolute;
+    font-size: 16px;
+    background-color: #fff;
+    color: rgb(76, 183, 255);
+    opacity: 0;
+    transition: 2s;
+    left: 100%;
+    top: 65%;
+}
+
+.catalog .dropdown-content2 p{
+    width: 100px;
+    height: 40px;    
+    margin: 0px;
+}
+
+.one .dropdown-content p:hover {
+    background-color: rgb(76, 183, 255);
+    color: white;
+}
+
+.one:hover .dropdown-content{
+    display: block;
+    opacity: 1;
+}
+
+.two:hover{
+    background-color: rgb(76, 183, 255);
+    color: white;
+}
+
+.two:hover .dropdown-content2 {
+    display: block;
+    opacity: 1;
+}
+
+/* BUTTONY */
+.catalog .buttons{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.catalog .buttons button{
+    border: 1px solid;
+    border-radius:20px;
+    margin: 10px;
+    height: 30px;
+    width: 70px;
+    font-size: 10px;
+}
+
+.catalog .buttons .login{
+    background-color: rgb(76, 183, 255);
+    color: white;
+    border-color: white;
+}
+
+.catalog .buttons .login:hover{
+    background-color: white;
+    color: rgb(76, 183, 255);
+    border-color: rgb(76, 183, 255);
+}
+
+.catalog .buttons .signup{
+    background-color: white;
+    color: rgb(76, 183, 255);
+    border-color: rgb(76, 183, 255);
+}
+
+.catalog .buttons .signup:hover{
+    background-color: rgb(76, 183, 255);
+    color: white;
+    border-color: white;
+}

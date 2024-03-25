@@ -1,0 +1,30 @@
+.box{
+    display: flex;    
+    align-items: flex-start;
+    text-align: center;
+    /* do pionowego układu */
+    /* width: 200px;  */
+    /* flex-direction: column; */
+
+    /* do poziomego układu */
+    height: 200px;
+    flex-wrap: wrap;
+}
+
+.box > div{
+    background-color: aquamarine;
+    width: 100px;
+    height: 100px;
+    border: 1.5px solid black;
+}
+
+.box > div:nth-child(1){
+    /* do pionowego układu */
+    /* width: 200px;  */
+    /* do poziomego układu */
+    height: 200px;
+}
+
+.box > .selected{
+    align-self: center;
+}

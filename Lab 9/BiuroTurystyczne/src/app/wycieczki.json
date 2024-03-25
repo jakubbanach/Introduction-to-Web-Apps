@@ -1,0 +1,112 @@
+[
+    {
+      "id": 0,
+      "nazwa": "Plażowanie w Cancun",
+      "docelowy_kraj": "Meksyk",
+      "data_rozpoczecia": "2024-07-15",
+      "data_zakonczenia": "2024-07-25",
+      "cena": 2500,
+      "miejsca": 20,
+      "opis": "Relaks na pięknych plażach, nurkowanie i zwiedzanie zabytków",
+      "zdjecie": ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/South_majorca_in_winter.jpg/180px-South_majorca_in_winter.jpg"]
+    },
+    {
+      "id": 1,
+      "nazwa": "Wspinaczka w Dolomitach",
+      "docelowy_kraj": "Włochy",
+      "data_rozpoczecia": "2024-08-10",
+      "data_zakonczenia": "2024-08-20",
+      "cena": 3200,
+      "miejsca": 15,
+      "opis": "Wędrówka po górskich szlakach i wspinaczka w pięknych Dolomitach",
+      "zdjecie": ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/South_majorca_in_winter.jpg/180px-South_majorca_in_winter.jpg"]
+    },
+    {
+      "id": 2,
+      "nazwa": "Safari w Kenii",
+      "docelowy_kraj": "Kenia",
+      "data_rozpoczecia": "2024-06-20",
+      "data_zakonczenia": "2024-07-02",
+      "cena": 3800,
+      "miejsca": 12,
+      "opis": "Obserwacja dzikiej przyrody w sercu Afryki",
+      "zdjecie": ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/South_majorca_in_winter.jpg/180px-South_majorca_in_winter.jpg"]
+    },
+    {
+      "id": 3,
+      "nazwa": "Wakacje nad Morzem Śródziemnym",
+      "docelowy_kraj": "Hiszpania",
+      "data_rozpoczecia": "2024-07-05",
+      "data_zakonczenia": "2024-07-15",
+      "cena": 2800,
+      "miejsca": 25,
+      "opis": "Leniwe dni na plaży, odkrywanie lokalnej kuchni i kultury",
+      "zdjecie": ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/South_majorca_in_winter.jpg/180px-South_majorca_in_winter.jpg"]
+    },
+    {
+      "id": 4,
+      "nazwa": "Wycieczka po Japonii",
+      "docelowy_kraj": "Japonia",
+      "data_rozpoczecia": "2024-08-05",
+      "data_zakonczenia": "2024-08-18",
+      "cena": 4500,
+      "miejsca": 18,
+      "opis": "Spotkanie z tradycją i nowoczesnością w kraju kwitnącej wiśni",
+      "zdjecie": ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/South_majorca_in_winter.jpg/180px-South_majorca_in_winter.jpg"]
+    },
+    {
+      "id": 5,
+      "nazwa": "Wakacje na Hawajach",
+      "docelowy_kraj": "Stany Zjednoczone",
+      "data_rozpoczecia": "2024-06-25",
+      "data_zakonczenia": "2024-07-05",
+      "cena": 3200,
+      "miejsca": 20,
+      "opis": "Rajskie plaże, surfowanie i egzotyczna przyroda Hawajów",
+      "zdjecie": ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/South_majorca_in_winter.jpg/180px-South_majorca_in_winter.jpg"]
+    },
+    {
+      "id": 6,
+      "nazwa": "Odkrywanie Parków Narodowych USA",
+      "docelowy_kraj": "Stany Zjednoczone",
+      "data_rozpoczecia": "2024-07-12",
+      "data_zakonczenia": "2024-07-25",
+      "cena": 3000,
+      "miejsca": 15,
+      "opis": "Przygoda w sercu amerykańskich parków narodowych",
+      "zdjecie": ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/South_majorca_in_winter.jpg/180px-South_majorca_in_winter.jpg"]
+    },
+    {
+      "id": 7,
+      "nazwa": "Wyprawa na Islandię",
+      "docelowy_kraj": "Islandia",
+      "data_rozpoczecia": "2024-08-15",
+      "data_zakonczenia": "2024-08-25",
+      "cena": 3800,
+      "miejsca": 10,
+      "opis": "Gejzery, lodowce i niezwykła natura na islandzkich ziemiach",
+      "zdjecie": ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/South_majorca_in_winter.jpg/180px-South_majorca_in_winter.jpg"]
+    },
+    {
+      "id": 8,
+      "nazwa": "Wakacje nad Bałtykiem",
+      "docelowy_kraj": "Polska",
+      "data_rozpoczecia": "2024-06-10",
+      "data_zakonczenia": "2024-06-20",
+      "cena": 1800,
+      "miejsca": 30,
+      "opis": "Spokojne wakacje nad polskim morzem, spacery i relaks",
+      "zdjecie": ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/South_majorca_in_winter.jpg/180px-South_majorca_in_winter.jpg"]
+    },
+    {
+      "id": 9,
+      "nazwa": "Wycieczka po Australii",
+      "docelowy_kraj": "Australia",
+      "data_rozpoczecia": "2024-07-20",
+      "data_zakonczenia": "2024-08-03",
+      "cena": 5000,
+      "miejsca": 20,
+      "opis": "Przygoda na antypodach, odwiedziny w miastach i spotkanie z naturą",
+      "zdjecie": ["https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/South_majorca_in_winter.jpg/180px-South_majorca_in_winter.jpg"]
+    }
+  ]

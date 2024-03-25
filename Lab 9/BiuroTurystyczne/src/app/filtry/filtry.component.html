@@ -1,0 +1,67 @@
+<div class="container-fluid h-75">
+  <!-- <div class="row h-100 justify-content-center align-items-center"> -->
+  <!-- <div class="col-md-8"> -->
+  <div class="container">
+    <form name="rodzaj_waluty" #walutaForm="ngForm">
+      <div class="mb-1">
+        <p class="co mb-0">Waluta:</p>
+        <div class="btn-group" role="group" aria-label="Waluta">
+          <input (change)="getWybranaWaluta($event)" type="radio" id="zloty" name="typ_waluty" value="zloty" [(ngModel)]="waluta">
+          <label class="btn fs-5" for="zloty">
+            <strong>PLN</strong>
+          </label>
+          <input (change)="getWybranaWaluta($event)" type="radio" id="dolar" name="typ_waluty" value="dolar" [(ngModel)]="waluta">
+          <label class="btn fs-5" for="dolar">
+            <i class="fas fa-dollar-sign"></i>
+          </label>
+          <input (change)="getWybranaWaluta($event)" type="radio" id="euro" name="typ_waluty" value="euro" [(ngModel)]="waluta">
+          <label class="btn fs-5" for="euro">
+            <i class="fas fa-euro-sign"></i>
+          </label>
+        </div>
+      </div>
+    </form>
+    
+    <form name="wycieczki" #myForm="ngForm">
+      <h2>Filtrowanie</h2>
+      <div class="mb-2">
+        <label for="location" class="form-label fs-6">Lokalizacja wycieczki:</label>
+        <input (change)="onChange($event)" id="location" class="form-control-sm" type="text"
+          placeholder="Wpisz lokalizację">
+      </div>
+
+      <div class="mb-1">
+        <label for="priceFrom" class="form-label fs-6">Cena od:</label>
+        <input (change)="onChange($event)" id="priceFrom" class="form-control-sm" type="number" placeholder="Min. cena">
+      </div>
+
+      <div class="mb-1">
+        <label for="priceTo" class="form-label fs-6">Cena do:</label>
+        <input (change)="onChange($event)" id="priceTo" class="form-control-sm" type="number" placeholder="Max. cena">
+      </div>
+
+      <!-- <div class="mb-1">
+            <label for="priceRange" class="form-label fs-6">Zakres cen:</label>
+            <ng5-slider [(value)]="priceRange" [high]="maxPrice" [options]="sliderOptions"></ng5-slider>
+          </div> -->
+
+      <div class="mb-1">
+        <label for="dateFrom" class="form-label fs-6">Data od:</label>
+        <input (change)="onChange($event)" id="dateFrom" class="form-control-sm" type="date">
+      </div>
+
+      <div class="mb-1">
+        <label for="dateTo" class="form-label fs-6">Data do:</label>
+        <input (change)="onChange($event)" id="dateTo" class="form-control-sm" type="date">
+      </div>
+
+      <div class="mb-1">
+        <label for="rating" class="form-label fs-6">Ocena:</label>
+        <input (change)="onChange($event)" id="rating" class="form-control-sm" type="number" min="0" max="5" step="0.1"
+          placeholder="0 - 5">
+      </div>
+
+      <button (click)="onReset(myForm)" class="btn btn-primary fs-6">RESET</button>
+    </form>
+  </div>
+</div>

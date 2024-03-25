@@ -1,0 +1,93 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Widnows-1250" />
+
+<style type="text/css">
+
+body {
+	font: 62.5% Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  background-color: #f1f1f1;
+  display: flex;
+}
+
+li{
+    flex:5px;
+    align-items: center;
+    color: #000;
+    background-color: #dddddd;
+    border: 1px dashed gray;
+}
+
+a {
+  display: block;
+  padding: 8px;
+  color: #000;
+  text-decoration: none;
+}
+
+li:hover {
+  background-color: #90d117;
+  font-weight: bold;
+  /* content: url('images/go.png'); */
+}
+
+li.quiz{
+  background-color: #ffffff;
+  font-weight: bold;
+}
+
+a img{
+    float: left;
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+
+a img:hover{
+    content: url('images/go.png');
+    /* margin-right: 10px; Add spacing to the right of the image */
+}
+
+a img.other:hover{
+    content: initial;
+}
+
+</style>
+</head>
+<body>
+  <ul>
+    <li>
+       <a href="/index.html"><img class="other" src="images/home.png">HOME</a> 
+    </li>
+    <li class="quiz">
+      <!-- <img src="images/link.png"> -->
+      <a href="/features/"><img class="other" src="images/bg_here.png">FEATURES</a>
+    </li>
+    <li>
+      <a href="/experts/">
+      <img src="images/link.png">EXPERTS</a>
+    </li>
+    <li>
+      <a href="/quiz/">
+        <img src="images/link.png">QUIZ</a>
+    </li>
+    <li>
+      <a href="/projects/">
+      <img src="images/link.png">PROJECTS</a>
+    </li>
+    <li>
+      <a href="/horoscopes/">
+      <img src="images/link.png">HOROSCOPES</a>
+    </li>
+  </ul>
+</body>
+</html>

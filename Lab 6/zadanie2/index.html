@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Książka adresowa</title>
+</head>
+
+<body>
+
+    <main>
+        <h1>Moja książka adresowa</h1>
+        <div id="adresy"> </div>
+
+
+        <section>
+            <form action="#">
+                <div class="input-container">
+                    <span>IMIĘ I NAZWISKO</span>
+                    <input type="text" id="name" name="name" class="normal-input" required
+                        pattern="[A-Z][a-z]+ [A-Z][a-z]+(-[A-Z][a-z]+)?">
+                </div>
+                <div class="input-container">
+                    <span>TELEFON</span>
+                    <input type="text" id="phone" name="phone" class="normal-input" required
+                        pattern="+?[0-9]{9-12}">
+                </div>
+                <div id="add">Dodaj</div>
+            </form>
+
+
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

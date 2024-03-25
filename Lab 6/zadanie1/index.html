@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Boxy z różnymi punktacjami</title>
+</head>
+<body>
+    
+    <div id="blue-box" class="clickable">
+        <span>1</span>
+        <div id="red-box" class="clickable">
+            <span>2</span>
+            <div id="yellow-box" class="clickable">
+                <span>3</span>
+            </div>
+        </div>
+    </div>
+    <p id="points">0</p>
+    <p id="info1">Tutaj będzie informacja</p>
+    <p id="info2">-</p>
+    <p id="info3">-</p>
+    <div class="buttons">
+        <button id="reset">Reset</button>
+        <button id="propagation" class="cur-stop">Stop Propagation</button>
+        <button id="reverse">Zmiana kolejności wywoływania zdarzeń</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

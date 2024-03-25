@@ -1,0 +1,125 @@
+body{
+    background-color: rgb(255, 255, 138);
+}
+
+.menu{
+    width: 350px;
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    /* border: 1px solid palevioletred; */
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    /* text-decoration: none; */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li{
+    border-top: 1px solid palevioletred;
+    overflow: hidden;
+}
+
+li:target .dropdown-content{
+    max-height: 20em;
+}
+
+.dropdown-menu{
+    display: block;
+    padding: 20px 15px;
+    background-color: palevioletred;
+    color: #fff;
+    position: relative;
+}
+
+/* triangle */
+.dropdown-menu:before{
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 0;
+    right: 25px;
+    bottom: -20px;
+    z-index: 1;
+    border-left: 20px solid transparent;
+    border-right:20px solid transparent;
+    border-top:20px solid red; 
+    /* border-top:55px solid transparent;  */
+    /* background-color: red; */
+}
+
+/* Aktualizuj tło .dropdown-menu po zaznaczeniu checkboxa */
+/* input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + .dropdown-menu {
+    background-color: red;
+} */
+
+.dropdown-content{
+    background: rgb(54, 54, 255);
+    overflow: hidden;
+    max-height:0em;
+    transition: 600ms linear all;
+}
+.dropdown-content a{
+    display: block;
+    padding: 20px 35px;
+    color: #fff;
+    font-size: 16px;
+    border-bottom: 1px solid rgb(54, 54, 255);
+    position: relative;
+    
+}
+.dropdown-content a:before{
+    content: '';
+    opacity: 0;
+    transition: opacity 1ms ease;
+}
+
+.dropdown-content a:after{
+    content: '';
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.dropdown-content a:hover{
+    background: #273057;
+    /* background: linear-gradient(top, #111838 0%, #222e68 48%, #243e85 52%, #273e7e 100%); */
+    transition: all 10ms;
+    border-bottom: 1px solid #394c7f;
+}
+
+.dropdown-content a:hover:after{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 6px;
+    right: 0px;
+    top:0;
+    opacity: 1;
+}
+
+.dropdown-content a:hover:before{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 310px;
+    left: 0;
+    top:0;
+    opacity: 1;
+    border-top: 27px solid transparent;
+    border-left: 20px solid rgb(255, 255, 138);
+    border-right: 20px solid rgb(255, 255, 138);
+    border-bottom: 27px solid transparent;
+}
+
+.dropdown-menu:hover {
+    background-color: #ff7070;
+}
+

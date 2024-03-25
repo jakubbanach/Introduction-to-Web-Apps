@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Przykładowy reset przycisku</title>
+</head>
+
+<body>
+    <button id="testButton">Zmień licznik</button>
+
+    <section id="numberSection">
+        <h2>Twoja liczba:</h2>
+        <p id="number"></p>
+    </section>
+
+
+
+    <script>
+        let clickCount = 0;
+        let active = false;
+        const testButton = document.getElementById('testButton');
+        const text = document.getElementById('number');
+        function incrementCounter() {
+            clickCount++;
+            text.innerHTML = clickCount;
+            //   console.log('Liczba kliknięć:', clickCount);
+        }
+
+        function attachClickHandler() {
+            text.innerHTML = "0";
+            testButton.addEventListener('click', incrementCounter);
+        }
+
+        function detachClickHandler() {
+            text.innerHTML = "RESET";
+            testButton.removeEventListener('click', incrementCounter);
+            clickCount = 0;
+        }
+
+        function toggleButtonActivity() {
+            if (active) {
+                attachClickHandler();
+                active = false;
+            } else {
+                detachClickHandler();
+                active = true;
+            }
+
+        }
+        attachClickHandler();
+        setInterval(toggleButtonActivity, 5000);
+
+    </script>
+
+</body>
+
+</html>

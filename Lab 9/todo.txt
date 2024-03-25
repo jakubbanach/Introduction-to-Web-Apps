@@ -1,0 +1,108 @@
+BIURO TURYSTYCZNE -> APKA 
+
+przygotowanie warstwy prezentacyjnej
+
+zarządzanie zawartością
+* ROUTING
+
+ZADANIA:
+--------------
+2-10 BIURO !!! zasada SOLID
+lista wycieczek -> lokalny JSON -- 5p
+zczytywanie z niego (minimum 10 ofert)
+
+OFERTA ma mieć następujące info:
+dokąd, termin, max miejsc
+nazwa, docelowy kraj wycieczki, data początku i końca wycieczki, 
+cena, max ilość miejsc, krótki opis oraz link do poglądowego zdjęcia
+
+Wyświetlanie -> *ngFor (zawiera + i -) 
+UWAGA!! - minus pojawia się dopiero po kliknięciu plusa
+Dodatkowo po plusie zmiana dostępności (liczba-1) i dodanie 
+numeru do WIDGETU koszyka wycieczki -- 2p
+przy wartościach >10 i <=10 widget ma mieć różny kolor
+
+Druga UWAGA!! nie możesz minusem zwrócić więcej miejsc do dostępności 
+niż jest na początku
+
+Przy małej dostępności miejsc na wycieczke jest zmiana koloru (albo czegokolwiek)!
+Gdy 0 miejsc dać napis brak miejsc i usunąć +
+
+USUŃ WYCIECZKĘ (przycisk na wycieczce) -- 1p
+DODAJ WYCIECZKĘ (Model Driven Forms) -- 2p
+
+OCENA WYCIECZKI - zastanowić się jak? -- 1p
+
+KOSZYK: -- 2p
+Tabelarycznie wycieczki: 
+jeśli pare miejsc na to samo to zwiekszyc ilośc (x1 -> x2)
+checkbox czy chce kupic wycieczke
+przycisk buy -> znika ze strony wycieczek
+i dodane do historii 
+
+HISTORIA: -- 2p
+archiwalne, oczekujące, trwające ...
+
+Filtry - komponent: -- 3p
+CO - lokalizacja  wycieczki,  cena  (zakres),  data (zakres), ocena 
+* zależne od siebie
+* mogą być bardziej zaawansowane - kilkukrokowe
+* możliwość przewalutowania -> może być w configu shardkodowane
+
+Dodaj wycieczkę z walidacją daty, etc...
+Zaznaczenie z DOSTĘPNYCH najdroższej i najtańszej
+
+WIDOKI -- 2p
+
+
+WSZYSTKO (lab9-11) ODDANIE DO 12 stycznia!!
+
+
+------------------------------------------
+RECENZJE -> osobny parametr wycieczki (lista w liście)
+
+
+LAB 11
+autentykacja - sprawdzić kim jest dany użytkownik 
+autoryzacja - sprawdzenie uprawnień użytkownika
+1 poziom: front - dostęp do wybranych (dedykowanych) widoków
+
+security guard - przy endpoincie uruchamia czy mamy uprawnienia
+koncepcja ról - uprawnienia dla danego użytkownika
+
+jedyna rzecz łączaca back z front to endpoint
+2 poziom: back - może być request symulujący (znając endpointa)
+DLATEGO APLIKACJA musi blokować te możliwości (security)
+
+* autentykacja - firebase i funkcjonalność authentication (zakładka)
++ instalacja auth (tak jak firebase)
+można dodawać userów - ale to jest dla INTRANETÓW, robimy samodzielną
+signin method - mail (unikalność i alternatywny kanał komunikacyjny)
+phone - dwuetapowe uwierzytelnianie
+
+* własna - tabele i endpointy obsługujące te rzeczy
+
+trwałość sesji - session/jwt token (suwak jakiś)
+bezpieczeństwo => session
+wygoda => local
+refresh => none
+
+defresh token (we własnej implementacji)
+
+nie można się zalogować z dwóch kont naraz - singleton !!
+
+#4 + #5 + #6
+role: 
+* gosc - home i oferta (bez możliwości klikania) + register i login
+* klient - home i pełna oferta + nick + logout
+* manager - może dodać oferty + klient
+* admin - manager+zarządzanie listą userów (zmiana ról + bany na komentarze)
+
+#7
+po dodaniu/modyfikacji chcemy zobaczenie zmiany u użytkowników
+* web socket - protokół SIP (peer2peer) -- zaawansowane rzeczy 
+* long pulling (synchroniczne odpytywanie w tle - o zmianę bazy/ogólne zmiany)
+(tak jak relacja tekstowa na żywo)
+
+jeśli bez własnego serwera -> 
+dodanie reguł (rules w FireBase) w pliku tekstowym pod kątem zabezpieczenia!!!

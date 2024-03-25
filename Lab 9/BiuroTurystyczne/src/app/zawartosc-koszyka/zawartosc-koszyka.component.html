@@ -1,0 +1,36 @@
+<div *ngIf="listaWycieczek.length !== 0">
+  <div class="card mb-3" *ngFor="let wycieczka of wycieczki">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img [src]="wycieczka.zdjecie" alt="{{ wycieczka.nazwa }}" class="d-block w-100">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title">{{ wycieczka.nazwa }}</h2>
+          <p class="card-text"><strong>Kraj:</strong> {{ wycieczka.docelowy_kraj }}</p>
+          <p class="card-text"><strong>Data rozpoczęcia:</strong> {{ wycieczka.data_rozpoczecia }}</p>
+          <p class="card-text"><strong>Data zakończenia:</strong> {{ wycieczka.data_zakonczenia }}</p>
+          <p class="card-text"><strong>Cena:</strong> {{ wycieczka.cena }} {{ waluta }}
+          </p>
+          <p class="card-text" *ngIf="wycieczka.miejsca !== 0" ><strong>Wolne miejsca:</strong> {{ wycieczka.miejsca }}</p>
+          <p class="card-text" *ngIf="wycieczka.miejsca === 0">Brak miejsc!</p>
+          <p class="card-text"><strong>Krótki opis:</strong> {{ wycieczka.opis }}</p>
+          <p class="card-text"><strong>TWOJE miejsca:</strong> {{ getIloscMiejsc(wycieczka.id) }}</p>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="wycieczka-controls">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="wybrana{{ wycieczka.id }}"
+            [ngModel]="czyWycieczkaWybrana(wycieczka.id)" (ngModelChange)="aktualizujWybranaCheckboxa(wycieczka.id)">
+            <label class="form-check-label" for="wybrana{{ wycieczka.id }}">Zaznacz</label>
+          </div>
+          <button *ngIf="wycieczka.miejsca !== 0" (click)="rezerwujMiejsce(wycieczka)" class="btn btn-primary">+</button>
+          <button (click)="rezygnujZMiejsca(wycieczka)" class="btn btn-primary">-</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<p class="suma-wartosci">Suma wartości: {{ sumaWartosci }} {{waluta}}</p>
+<button (click)="kupWycieczki()" class="btn btn-success">Kup wycieczki</button>

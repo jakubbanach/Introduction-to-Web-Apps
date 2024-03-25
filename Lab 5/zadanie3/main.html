@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edycja listy elementów</title>
+</head>
+
+<body>
+    <button id="addButton">Dodaj na koniec listy</button>
+    <button id="removeButton">Usuń z początku listy</button>
+
+    <section id="listSection">
+        <h2>Lista:</h2>
+        <p id="list"></p>
+    </section>
+
+
+
+    <script>
+        let table = ["Pierwszy", "Drugi", "Trzeci", "Czwarty"];
+        const add = document.getElementById('addButton');
+        const remove = document.getElementById('removeButton');
+        const text = document.getElementById('list');
+
+        function generujLosowyCiąg() {
+            const znaki = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ';
+            const dlugosc = Math.floor(Math.random() * 20) + 1; // Losowa długość maksymalnie do 20 znaków
+
+            let ciag = '';
+            for (let i = 0; i < dlugosc; i++) {
+                const losowyIndex = Math.floor(Math.random() * znaki.length);
+                ciag += znaki.charAt(losowyIndex);
+            }
+
+            return ciag;
+        }
+
+        function printTable(){
+            let listHTML = "<ul>";
+            for (let i = 0; i<table.length; i++){
+                listHTML += "<li>" + table[i] + "</li>";
+            }
+            listHTML += "</ul>";
+            return listHTML;
+        }
+        window.onload = function() {
+            // Tutaj umieść kod funkcji, która ma zostać wykonana po załadowaniu strony
+            text.innerHTML = printTable();
+        };
+
+        add.addEventListener('click', function () {
+            table.push(generujLosowyCiąg());
+            text.innerHTML = printTable();
+        });
+
+        remove.addEventListener('click', function () {
+            table.shift();
+            text.innerHTML = printTable();
+        });
+
+    </script>
+
+</body>
+
+</html>

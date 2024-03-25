@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zmiana zdjęć</title>
+</head>
+
+<body>
+    <button id="promptButton">Zmień zdjęcie</button>
+
+    <section id="pictureSection">
+        <picture id="pictureContent">
+            <img src="img/Gory.jpg" alt="pic" id="image" width="600px" style="border: 10px solid gray;">
+        </picture>
+    </section>
+
+
+
+    <script>
+        let images = ["img/Gory.jpg", "img/Kajaki.jpg", "img/Morze.jpg", "img/Skoki.jpg"]
+        let clicks = 0
+        document.getElementById('promptButton').addEventListener('click', function () {
+            // let x = document.getElementById('image').src
+            clicks+=1
+            // console.log(x)
+            // alert(x)
+            document.getElementById('image').src=images[clicks%4]
+            if(clicks%4 == 1) {
+                document.getElementById('image').style.border = "10px solid lightgreen";
+            } else if (clicks%4 == 2){
+                document.getElementById('image').style.border = "10px solid lightblue";
+            } else if (clicks%4 == 3){
+                document.getElementById('image').style.border = "10px solid lightcoral";
+            } else{
+                document.getElementById('image').style.border = "10px solid gray";
+            }
+            
+        });
+    </script>
+
+</body>
+
+</html>

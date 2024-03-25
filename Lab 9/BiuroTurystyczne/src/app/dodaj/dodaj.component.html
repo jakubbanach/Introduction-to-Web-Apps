@@ -1,0 +1,115 @@
+<div class="register-form">
+    <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && dodajWycieczke(f)" novalidate>
+        <h2>Dodaj wycieczkę</h2>
+
+        <div class="form-group">
+            <label>Nazwa</label>
+            <input type="text" class="form-control" name="nazwa" [(ngModel)]="form.nazwa" required minlength="3"
+                #nazwa="ngModel" [ngClass]="{ 'is-invalid': f.submitted && nazwa.errors }" />
+            @if (f.submitted && nazwa.errors) {
+            <div class="invalid-feedback">
+                @if (nazwa.errors['required']) {
+                <div>Nazwa jest wymagana!</div>
+                }
+                @if (nazwa.errors['minlength']) {
+                <div>Nazwa musi mieć co najmniej 3 znaki</div>
+                }
+            </div>
+            }
+        </div>
+
+        <div class="form-group">
+            <label>Kraj</label>
+            <input type="text" class="form-control" name="docelowy_kraj" [(ngModel)]="form.docelowy_kraj" required
+                #docelowy_kraj="ngModel" [ngClass]="{ 'is-invalid': f.submitted && docelowy_kraj.errors }" />
+            @if (f.submitted && docelowy_kraj.errors) {
+            <div class="invalid-feedback">
+                @if (docelowy_kraj.errors['required']) {
+                <div>Kraj jest wymagany!</div>
+                }
+            </div>
+            }
+        </div>
+
+        <!-- <div class="mb-0 mt-0">
+            <label for="data_rozpoczecia" class="form-label fs-6">Data rozpoczęcia:</label>
+            <input id="data_rozpoczecia" type="date" class="form-control-sm" formControlName="data_rozpoczecia">
+        </div> -->
+        <div class="form-group">
+            <label>Data rozpoczęcia</label>
+            <input type="date" class="form-control" name="data_rozpoczecia" [(ngModel)]="form.data_rozpoczecia" required
+                #data_rozpoczecia="ngModel" [ngClass]="{ 'is-invalid': f.submitted && data_rozpoczecia.errors }" />
+            @if (f.submitted && data_rozpoczecia.errors) {
+            <div class="invalid-feedback">
+                @if (data_rozpoczecia.errors['required']) {
+                <div>Data rozpoczecia jest wymagana!</div>
+                }
+            </div>
+            }
+        </div>
+
+        <div class="form-group">
+            <label>Data zakończenia</label>
+            <input type="date" class="form-control" name="data_zakonczenia" [(ngModel)]="form.data_zakonczenia" required
+                #data_zakonczenia="ngModel" [ngClass]="{ 'is-invalid': f.submitted && data_zakonczenia.errors }" />
+            @if (f.submitted && data_zakonczenia.errors) {
+            <div class="invalid-feedback">
+                @if (data_zakonczenia.errors['required']) {
+                <div>Data zakończenia jest wymagana!</div>
+                }
+            </div>
+            }
+        </div>
+
+        <div class="form-group">
+            <label>Cena [w PLN]</label>
+            <input type="number" class="form-control" name="cena" [(ngModel)]="form.cena" required min="0" step="0.01"
+                #cena="ngModel" [ngClass]="{ 'is-invalid': f.submitted && cena.errors }" />
+            @if (f.submitted && cena.errors) {
+            <div class="invalid-feedback">
+                @if (cena.errors['required']) {
+                <div>Cena jest wymagana!</div>
+                }
+                @if (cena.errors['step']) {
+                <div>Maksymalnie 2 miejsca po przecinku!</div>
+                }
+            </div>
+            }
+        </div>
+
+        <div class="form-group">
+            <label>Miejsca</label>
+            <input type="number" class="form-control" name="miejsca" [(ngModel)]="form.miejsca" required min="0"
+                #miejsca="ngModel" [ngClass]="{ 'is-invalid': f.submitted && miejsca.errors }" />
+            @if (f.submitted && miejsca.errors) {
+            <div class="invalid-feedback">
+                @if (miejsca.errors['required']) {
+                <div>Miejsca są wymagane!</div>
+                }
+            </div>
+            }
+        </div>
+
+        <div class="form-group">
+            <label>Opis</label>
+            <textarea type="text" class="form-control" name="opis" [(ngModel)]="form.opis"></textarea>
+        </div>
+
+        <!-- <div class="form-group">
+            <label>Zdjęcia</label>
+            <input type="file" class="form-control" name="zdjecia" (change)="handleFileInput($event)" accept="image/*" multiple />
+        </div> -->
+
+        <!-- <div class="form-group">
+            <label>Zdjęcia (linki)</label>
+            <input type="text" class="form-control" name="zdjecie" [(ngModel)]="form.zdjecie" />
+          </div> -->
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Dodaj</button>
+            <button type="button" (click)="onReset(f)" class="btn btn-warning float-right">
+                Reset
+            </button>
+        </div>
+    </form>
+</div>

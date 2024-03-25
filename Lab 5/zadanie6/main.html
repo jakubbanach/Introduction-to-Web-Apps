@@ -1,0 +1,63 @@
+<!DOCTYPE HTML> 
+<head>
+    <meta charset="utf-8">
+    <title>Ładowanie JSONa  </title>
+    <script type="text/javascript" src="user.json"></script>
+</head>
+<body>
+    <input type="checkbox" id="checkbox">
+    <label id="label" for="checkbox">Ukryj dane</label>
+    <ul id="dane"> </ul>
+
+    <script>
+        function wczytywanie(item, condition){
+            const { firstName, lastName, Address, email, phone } = item;
+            const { Street, City, Country} = Address;
+            let text = `**Name**: ${firstName} ${lastName}`;
+
+            if (condition) {
+                text += `
+                **Address**: ${Street}, ${City}, ${Country},
+                **Mail**: ${email}, 
+                **Phone**: ${phone}`;
+            }
+            return text;
+        }
+
+        fetch('user.json')
+          .then(response => response.json())
+          .then(data => {
+            const jsonDataElement = document.getElementById('dane');
+            const checkbox = document.getElementById('checkbox');
+            const label = document.getElementById('label');
+            let condition = true;
+            
+            function loadData(data, condition){
+                jsonDataElement.innerHTML = '';
+
+                data.forEach(item => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = wczytywanie(item, condition);
+                    jsonDataElement.appendChild(listItem);
+                });
+            }
+
+            checkbox.addEventListener('change', function() {
+                if (checkbox.checked) {
+                    condition = false;
+                    label.innerHTML = "Pokaż elementy";
+                    loadData(data, condition);
+                } else {
+                    condition = true;
+                    label.innerHTML = "Ukryj elementy";
+                    loadData(data, condition);
+                }
+            });
+            loadData(data, condition);            
+          })
+          .catch(error => {
+            console.error('Błąd wczytywania pliku JSON:', error);
+          });
+      </script>
+</body>
+</html>

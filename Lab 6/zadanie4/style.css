@@ -1,0 +1,57 @@
+html{
+    height:100%;
+    width:100%;
+}
+
+body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+}
+
+#plansza{
+    background-color: lightblue;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index:0;
+}
+
+#boisko{
+    background-color: lightgreen;
+    border:2px solid black;
+    height:80%;
+    width:80%;
+    position: relative;
+    z-index:1;
+    overflow: hidden;
+}
+
+.clickable:hover{
+    cursor: pointer;
+}
+
+#pilka{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition-duration: 1.5s;
+    transition-property: left, top;
+    transition-timing-function: ease;
+} 
+
+#text{
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+}
